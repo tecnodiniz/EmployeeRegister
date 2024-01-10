@@ -1,0 +1,28 @@
+﻿DROP TABLE IF EXISTS Employees;
+DROP TABLE IF EXISTS Users;
+
+
+
+CREATE TABLE Users(
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	userLogin VARCHAR(32) NOT NULL,
+	userEmail VARCHAR(32) NOT NULL,
+	userPassword VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Employees(
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	name VARCHAR(32) NOT NULL,
+	email VARCHAR(32) NOT NULL,
+	phone VARCHAR(15),
+	address varchar(255),
+	userId int NOT NULL,
+	FOREIGN KEY (userId) REFERENCES Users (id)
+);
+
+INSERT INTO users (userLogin,userEmail,userPassword) VALUES
+	('admin','ti@facilitybond.com.br','admin'),
+	('duuhdiniz','diniz480@gmail.com','diniz123');
+
+INSERT INTO employees (name, email, phone, address, userId) VALUES 
+	('Eduardo Diniz','diniz480@gmail.com','(11)98368-3715','Rua Ribeirão Preto 290',2);
