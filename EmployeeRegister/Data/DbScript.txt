@@ -17,6 +17,7 @@ CREATE TABLE Employees(
 	phone VARCHAR(15),
 	address varchar(255),
 	userId int NOT NULL,
+	userPicture VARBINARY(MAX),	
 	FOREIGN KEY (userId) REFERENCES Users (id)
 );
 

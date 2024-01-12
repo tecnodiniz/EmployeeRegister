@@ -13,6 +13,7 @@ namespace EmployeeRegister.Model
         [Key]
         public int Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         public int UserId {  get; set; }
 
@@ -29,7 +30,11 @@ namespace EmployeeRegister.Model
 
         public string Address { get; set; }
 
+        public byte[] UserPicture { get; set; }
+
         public User User { get; set; }
+
+
 
     }
 }

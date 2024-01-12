@@ -38,36 +38,38 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbUserLogin = new System.Windows.Forms.Label();
             this.lbDateTime = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rtxtAddress = new System.Windows.Forms.RichTextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.clock = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pnSaveChanges = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pnUpdate = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnSaveChanges.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.pnUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewEmployees
@@ -108,16 +110,15 @@
             this.dataGridViewEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewEmployees.Size = new System.Drawing.Size(776, 197);
             this.dataGridViewEmployees.TabIndex = 1;
+            this.dataGridViewEmployees.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEmployees_CellContentDoubleClick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.btnBrowse);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.rtxtAddress);
+            this.panel1.Controls.Add(this.txtPhone);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -161,54 +162,38 @@
             this.lbDateTime.TabIndex = 17;
             this.lbDateTime.Text = "00:00:00";
             // 
-            // button5
+            // rtxtAddress
             // 
-            this.button5.Location = new System.Drawing.Point(644, 166);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 36);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Test Connection";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.rtxtAddress.Enabled = false;
+            this.rtxtAddress.Location = new System.Drawing.Point(314, 112);
+            this.rtxtAddress.Name = "rtxtAddress";
+            this.rtxtAddress.Size = new System.Drawing.Size(269, 90);
+            this.rtxtAddress.TabIndex = 3;
+            this.rtxtAddress.Text = "";
             // 
-            // btnBrowse
+            // txtPhone
             // 
-            this.btnBrowse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBrowse.Location = new System.Drawing.Point(13, 186);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(187, 36);
-            this.btnBrowse.TabIndex = 14;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.txtPhone.Enabled = false;
+            this.txtPhone.Location = new System.Drawing.Point(314, 81);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(269, 20);
+            this.txtPhone.TabIndex = 2;
             // 
-            // richTextBox1
+            // txtEmail
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(314, 112);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(269, 90);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(314, 47);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(269, 20);
+            this.txtEmail.TabIndex = 1;
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.Location = new System.Drawing.Point(314, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(269, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(314, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(314, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtName.Enabled = false;
+            this.txtName.Location = new System.Drawing.Point(314, 13);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(269, 20);
+            this.txtName.TabIndex = 0;
             // 
             // label4
             // 
@@ -270,12 +255,130 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Search";
             // 
-            // textBox4
+            // txtSearch
             // 
-            this.textBox4.Location = new System.Drawing.Point(180, 266);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(452, 20);
-            this.textBox4.TabIndex = 1;
+            this.txtSearch.Location = new System.Drawing.Point(180, 266);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(452, 20);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.Text = "Name, Email or Phone";
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(-17, -7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(199, 60);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "             Add";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // clock
+            // 
+            this.clock.Tick += new System.EventHandler(this.clock_Tick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Location = new System.Drawing.Point(254, 525);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(129, 44);
+            this.panel3.TabIndex = 16;
+            // 
+            // pnSaveChanges
+            // 
+            this.pnSaveChanges.Controls.Add(this.btnEdit);
+            this.pnSaveChanges.Location = new System.Drawing.Point(119, 525);
+            this.pnSaveChanges.Name = "pnSaveChanges";
+            this.pnSaveChanges.Size = new System.Drawing.Size(129, 44);
+            this.pnSaveChanges.TabIndex = 17;
+            this.pnSaveChanges.Visible = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(-17, -7);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(199, 60);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "        Save Changes";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnCancel);
+            this.panel5.Location = new System.Drawing.Point(524, 525);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(129, 44);
+            this.panel5.TabIndex = 18;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(-17, -7);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnCancel.Size = new System.Drawing.Size(199, 60);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "             Cancel";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnDelete);
+            this.panel6.Location = new System.Drawing.Point(659, 525);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(129, 44);
+            this.panel6.TabIndex = 19;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(-17, -7);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(199, 60);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "             Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // pnUpdate
+            // 
+            this.pnUpdate.Controls.Add(this.button1);
+            this.pnUpdate.Location = new System.Drawing.Point(389, 525);
+            this.pnUpdate.Name = "pnUpdate";
+            this.pnUpdate.Size = new System.Drawing.Size(129, 44);
+            this.pnUpdate.TabIndex = 20;
             // 
             // button1
             // 
@@ -288,107 +391,29 @@
             this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(199, 60);
             this.button1.TabIndex = 2;
-            this.button1.Text = "             New";
+            this.button1.Text = "            Update";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // clock
-            // 
-            this.clock.Tick += new System.EventHandler(this.clock_Tick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(254, 525);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(129, 44);
-            this.panel3.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Location = new System.Drawing.Point(389, 525);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(129, 44);
-            this.panel4.TabIndex = 17;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-17, -7);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(199, 60);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "             Edit";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Location = new System.Drawing.Point(524, 525);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(129, 44);
-            this.panel5.TabIndex = 18;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-17, -7);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(199, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "             Cancel";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Location = new System.Drawing.Point(659, 525);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(129, 44);
-            this.panel6.TabIndex = 19;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-17, -7);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(199, 60);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "             Delete";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 581);
+            this.Controls.Add(this.pnUpdate);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnSaveChanges);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewEmployees);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -397,9 +422,10 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.pnSaveChanges.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.pnUpdate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,31 +435,32 @@
 
         private System.Windows.Forms.DataGridView dataGridViewEmployees;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox rtxtAddress;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbDateTime;
         private System.Windows.Forms.Label lbUserLogin;
         private System.Windows.Forms.Timer clock;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnSaveChanges;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel pnUpdate;
+        private System.Windows.Forms.Button button1;
     }
 }
 
